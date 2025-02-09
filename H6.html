@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vormide loomine</title>
+    <style>
+        th {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h2>Vormide loomine</h2>
+    <form action="#" method="post" autocomplete="on"> 
+        <fieldset>
+            <table>
+                <tr>
+                    <th><label>Kasutajanimi: </label></th>
+                    <th><input type="text" name="nimi" maxlength="6" placeholder="max pikkus 6"><br></th>
+                </tr>
+                <tr>
+                    <th><label>kursus</label></th>
+                    <th><input type="text" name="nimi" maxlength="3" placeholder="max pikkus 3"><br></th>
+                </tr>
+                <tr>
+                    <th><label>Osakorra number: </label></th>
+                    <th><input type="number" value="1" min="1" max="30" step="1"><br></th>
+                </tr>
+                <tr>
+                    <th><label>Parool: </label></th>
+                    <th><input type="password" name="parool" ><br></th>
+                </tr>
+                <tr>
+                    <th><label>Vali teenus: </label></th>
+                    <th>
+                        <select>
+                            <option value="odav">Odav 0,59€</option>
+                        </select><br>
+                    </th>
+                </tr>
+                <tr>
+                    <th><label>Roll: </label></th>
+                    <th>
+                        <input type="radio" name="roll" value="admin">Admin <br>
+                        <input type="radio" name="roll" value="mod">Moderaator <br>
+                        <input type="radio" name="roll" value="user">User
+                    </th>
+                </tr>
+                <tr>
+                    <th><label>Nõustun tingimustega</label></th>
+                    <th><input type="checkbox"></th>
+                </tr>
+                <tr>
+                    <th><label>Enesetutvustus:</label></th>
+                    <th><textarea name="enesetutvustus"></textarea></th>
+                </tr>
+                <tr>
+                    <th><button>Tühjenda väljad</button></th>
+                    <th><button>Saada</button></th>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>
