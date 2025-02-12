@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+div{
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    background-image:url(img.png);
+    height: 400px;
+    color: white;
+    container: flex;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    justify-content: center;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.liha {
+    width: 200px;
+    margin: 10px;
+
+}
+
+.liha img {
+    width: 100%;
+}
+
+.liha h3 {
+    color: #38a0d9;
+}
+
+p {
+    color: gray;
+}
+
+footer {
+    text-align: center;
+}
