@@ -6,7 +6,10 @@
 
 div{
     max-width: 1200px;
-    margin: auto;
+}
+
+h4, h1, h3 {
+    font-weight: normal;
 }
 
 header {
@@ -14,16 +17,43 @@ header {
     height: 400px;
     color: white;
     container: flex;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content:space-between;
+    position: relative;
+}
+
+.heading, nav {
+    position: absolute;
+}
+nav {
+    right:0;
+    bottom:0;
+    padding: 45px;
+}
+
+.heading {
+    bottom:0;
+    padding: 30px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
+    padding: 20px;
 }
 
 .content {
     justify-content: center;
     text-align: center;
+}
+
+.content h1 {
+    font-weight: normal;
+}
+
+.content p {
+    margin: 40px 200px;
 }
 
 .cards {
@@ -34,7 +64,6 @@ nav a {
 .liha {
     width: 200px;
     margin: 10px;
-
 }
 
 .liha img {
@@ -43,6 +72,7 @@ nav a {
 
 .liha h3 {
     color: #38a0d9;
+    margin: 15px 0;
 }
 
 p {
@@ -51,4 +81,6 @@ p {
 
 footer {
     text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
 }
