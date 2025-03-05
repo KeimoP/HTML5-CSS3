@@ -2,40 +2,92 @@
 <html lang="et">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">    <title>H2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>H6</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="container">
-      <nav></nav>
-        <div class="row">
-          <div class="col-sm-8">
-            <div class="content">
-              <div class="Autor">
-                <span class="lead">Autor: </span>
-                <span class="lead text-primary">Keimo</span>
-              </div>
-              <span class="badge bg-danger">Lorem</span>
-              <span class="badge bg-secondary">Lorem</span>
-              <img src="https://picsum.photos/1200/300" alt="img" width="100%">          
-              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga qui voluptatibus et. Quia sit qui aspernatur eveniet aperiam ipsam consequatur maxime quas, facilis autem ratione a expedita odio beatae laborum.</p>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima ratione numquam quia animi quasi expedita illum sint fugiat, ex, laudantium qui saepe id esse rem odit, sit fugit odio soluta?</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, corrupti ea hic officia amet incidunt, est quam id officiis harum accusamus excepturi aut deserunt nihil placeat debitis fuga quisquam culpa.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro recusandae, quo minus dicta excepturi esse amet maxime unde quas blanditiis, sequi eligendi itaque, est iure asperiores adipisci omnis cupiditate voluptate.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, vero dolorum assumenda, reprehenderit voluptatibus expedita dicta facere accusantium repellat eum quo eligendi accusamus id natus atque quisquam ad delectus tempore?</p>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand text-white" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-emoji-kiss" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M12.493 13.368a7 7 0 1 1 2.489-4.858c.344.033.68.147.975.328a8 8 0 1 0-2.654 5.152 9 9 0 0 1-.81-.622m-3.731-3.22a13 13 0 0 0-1.107.318.5.5 0 1 1-.31-.95c.38-.125.802-.254 1.192-.343.37-.086.78-.153 1.103-.108.16.022.394.085.561.286.188.226.187.497.131.705a1.9 1.9 0 0 1-.31.593q-.115.16-.275.343.16.186.276.347c.142.197.256.397.31.595.055.208.056.479-.132.706-.168.2-.404.262-.563.284-.323.043-.733-.027-1.102-.113a15 15 0 0 1-1.191-.345.5.5 0 1 1 .31-.95c.371.12.761.24 1.109.321q.264.062.446.084a6 6 0 0 0-.502-.584.5.5 0 0 1 .002-.695 5.5 5.5 0 0 0 .5-.577 5 5 0 0 0-.448.082Zm.766-.087-.003-.001-.003-.001zm.002 1.867-.006.001zM6 8c.552 0 1-.672 1-1.5S6.552 5 6 5s-1 .672-1 1.5S5.448 8 6 8m2.757-.563a.5.5 0 0 0 .68-.194.93.93 0 0 1 .813-.493c.339 0 .645.19.813.493a.5.5 0 0 0 .874-.486A1.93 1.93 0 0 0 10.25 5.75c-.73 0-1.356.412-1.687 1.007a.5.5 0 0 0 .194.68M14 9.828c1.11-1.14 3.884.856 0 3.422-3.884-2.566-1.11-4.562 0-3.421Z"/>
+        </svg>Minu blogi</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#minuMenyy" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="minuMenyy">
+          <ul class="navbar-nav mr-sm-2">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Avaleht</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blogi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CV</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Kontakt</a>
+            </li>
+          </ul>
         </div>
-          <div class="col-sm-4">
-            <h2>Loend siia</h2>
-            <ol class="list-group-item">
-              <li class="list-group-item">lorem Ipsum</li>
-              <li class="list-group-item">lorem Ipsum</li>
-              <li class="list-group-item">lorem Ipsum</li>
-              <li class="list-group-item">lorem Ipsum</li>
-              <li class="list-group-item">lorem Ipsum</li>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <nav class="mt-3" aria-label="breadcrumb">
+            <ol class="breadcrumb rounded-1">
+              <li class="breadcrumb-item"><a href="#">Blogi</a></li>
+              <li class="breadcrumb-item"><a href="#">Veebitehnoloogia</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Sinupostitus</li>
             </ol>
+          </nav>
+          <div class="content">
+            <h1>Mingi postitus</h1>
+            <div class="Autor">
+              <span class="lead">Autor: </span>
+              <span class="lead text-primary">Keimo</span>
+            </div>
+            <span>26.02.2025</span>
+            <span class="badge bg-danger">css</span>
+            <span class="badge bg-warning text-black">bootstrap</span>
+            <img class="mt-3 rounded-1" src="https://picsum.photos/1200/400" alt="img" style="width: 100%;">          
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga qui voluptatibus et. Quia sit qui aspernatur eveniet aperiam ipsam consequatur maxime quas, facilis autem ratione a expedita odio beatae laborum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima ratione numquam quia animi quasi expedita illum sint fugiat, ex, laudantium qui saepe id esse rem odit, sit fugit odio soluta?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, corrupti ea hic officia amet incidunt, est quam id officiis harum accusamus excepturi aut deserunt nihil placeat debitis fuga quisquam culpa.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro recusandae, quo minus dicta excepturi esse amet maxime unde quas blanditiis, sequi eligendi itaque, est iure asperiores adipisci omnis cupiditate voluptate.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, vero dolorum assumenda, reprehenderit voluptatibus expedita dicta facere accusantium repellat eum quo eligendi accusamus id natus atque quisquam ad delectus tempore?</p>
+          </div>
+      </div>
+        <div class="col-sm-4">
+          <div class="card mt-3">
+            <div class="card-header">
+              <h5 class="pt-2">Kategooriad</h5>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <a class="d-block mt-3 mx-3" href="#">HTML</a>
+                <a class="d-block mt-1 mx-3" href="#">CSS</a>
+                <a class="d-block mt-1 mb-3 mx-3" href="#">Bootstrap</a>
+              </div>
+              <div class="col-md-6">
+                <a class="d-block mt-3 mx-3" href="#">JavaScript</a>
+                <a class="d-block mt-1 mx-3" href="#">PHP</a>
+                <a class="d-block mt-1 mb-3 mx-3" href="#">MySQL</a>
+              </div>
+            </div>
+          </div>
+          <div class="card mt-4">
+            <div class="card-header">
+              <h5 class="pt-2">Muu info</h5>
+            </div>
+            <p class="p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem repellat cupiditate ducimus harum perferendis? Alias commodi officiis, impedit vel eaque quibusdam, id voluptate consequuntur eligendi reiciendis ut accusantium? Aut id, maxime libero consectetur fuga cumque earum modi ipsam quisquam veniam voluptatem ad, eos nulla unde ratione doloribus sint aspernatur? Quibusdam?</p>
           </div>
         </div>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>

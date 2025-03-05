@@ -1,0 +1,38 @@
+Lae alla ja paigalda VS Code
+    Ava programm ja lisa pistikprogrammid: Live Server, Prettier ja Lorem Picsum (lisab pildid)
+Lae alla ja paigalda Github Desktop
+    Kui sul on repositoorium juba tehtud, siis mine Githubi ja kopeeri selle link
+    Github Desktopis vali File>Clone Repository>URL
+Lae alla ja paigalda FileZilla (vms näiteks WinSCP)
+
+Loo linkidega ühendatud HTML dokumendid nagu pildil, salvesta githubis ja lae üles liivakast.hkhk.edu.ee/~sinukasutaja
+
+index.html
+    loo uus HTML5 dokument
+    lisa päisesse dokumendi pealkiri "Kodutöö nr1"
+    määra dokumendi keeleks eesti keel (lang="et")
+    veendu, et oleks olemas UTF-8 ja telefonide jaoks skaleerimisvõime
+    lisa metaandmetesse author ja sinu nimi
+
+Koosta põhikonteiner
+    loo põhikonteiner (class="container"), mis hõlmab kogu veebilehe sisu. See aitab hoida lehe sisu korralikult organiseerituna.
+
+Lisa päise konteiner
+    koosta päis (class="header"), mis sisaldab pealkirja, näiteks "Nimi veebileht".
+    lisa bänneri pilt 1200x300 (kui plugin lisatud, siis kirjuta: picsum+tab)
+    koosta navigeerimismenüü, mis sisaldab linke teistele lehtedele nagu "Tooted (avaleht)", "Teenused" ja "Login".
+    menüüd ümbritseb joon "hr"
+Kujunda sisuosa
+    loo sisuosa (class="content"), mis sisaldab teavet toodete või teenuste kohta.
+    kujunda toodete esitlus tabeli kujul (2 rida, 3 lahtrit). Iga toode peaks olema omaette lahtris koos pildi, hinna ja ostunupuga.
+    iga toote jaoks lisa pilt 300x300 (picsum)
+    hind paksult ja üks hind mahakriipsutatud ning lisatud uus hind
+Valideeri
+
+teenused.html - sisu osa koosneb pealkirjas ja kolmest tekstilõigust
+login.html
+    sisu paigutatud tabelisse
+    esimene kast lubab sisestata teksti ja sisaldab "placeholder" teksti
+    parooliväli ei tohi kuvada parooli
+    "pea mind meeles" on "checkbox"
+    nupp sisaldab teksti "Logi sisse"

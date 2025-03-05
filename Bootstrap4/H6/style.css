@@ -1,0 +1,12 @@
+.nav-link:active {
+    color: white;
+}
+
+.breadcrumb {
+    background-color: #e9ecef;
+    padding: .75rem 1rem;
+}
+
+a {
+    text-decoration: none;
+}

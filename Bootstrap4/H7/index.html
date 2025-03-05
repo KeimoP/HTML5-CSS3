@@ -3,11 +3,43 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>H7</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <h1>Lorem ipsum</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad maiores minima doloremque tempore, facere, aspernatur aperiam eum quod assumenda delectus reprehenderit voluptas placeat nisi unde blanditiis, impedit iste earum eius numquam doloribus! Odio, nostrum amet. Odio obcaecati ipsa cupiditate. Quo expedita at delectus nulla doloribus blanditiis voluptates fugiat nisi soluta!</p>    
+        </div>
+        <div class="col-sm-4">
+          <div hidden >
+              <div data-name="popover-content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, sequi!</p>
+              </div>
+          </div>
+          <a id="example" tabindex="0" role="button" data-bs-toggle="popover" title="Default: Html inside popover" ><img src="https://images.freeimages.com/fic/images/icons/1963/colorcons_blue/128/questionmark.png" alt="?" height="20"></a>
+        </div>
+      </div>
+    </div>
+    <script>
+      $('.popover-dismiss').popover({
+      trigger: 'focus'
+      })
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function() {
+          var options = {
+              html: true,
+              title: "Abitekst",
+              content: $('[data-name="popover-content"]')
+          }
+          var exampleEl = document.getElementById('example')
+          var popover = new bootstrap.Popover(exampleEl, options)
+      })
+    </script>
   </body>
 </html>
