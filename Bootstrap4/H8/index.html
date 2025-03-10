@@ -10,7 +10,7 @@
     <div class="container">
       <h3>Registreerimine</h3>
         <form class="needs-validation" novalidate>
-          <div class="form-row">
+          <div class="form-group row">
             <div class="col-md-4 mb-3">
               <div>
                 <label for="valid1">Eesnimi</label>
@@ -28,7 +28,7 @@
                 </div>
               </div>
           </div>
-          <div class="form-row">
+          <div class="form-group row">
             <div class="col-md-4 mb-3">
               <div>
                 <label for="valid1">Email</label>
@@ -46,11 +46,24 @@
                 </div>
               </div>
           </div>
+          <div class="form-group row">
+            <div class="col-md-8 mb-3">
+              <div>
+                <label for="valid1">Kirjeldus</label>
+                <textarea class="form-control" rows="5" id="valid1" required></textarea>
+                <div class="valid-feedback">Korras</div>
+                <div class="invalid-feedback">Palun täida!</div>
+              </div>
+            </div>
+          </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck1">
-            <label class="form-check-label" for="gridCheck1">
-              Example checkbox
+            <input class="form-check-input" type="checkbox" id="valid2" required>
+            <label class="form-check-label" for="valid2">
+              Olen tutvunud ja nõus
+              privaatsustingimustega
             </label>
+            <div class="valid-feedback mb-3">Korras</div>
+            <div class="invalid-feedback mb-3">Palun täida!</div>
           </div>
           <input class="btn btn-primary" type="submit" value="Registreeru">
         </form>
