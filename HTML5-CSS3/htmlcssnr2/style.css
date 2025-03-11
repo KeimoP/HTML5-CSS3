@@ -33,6 +33,7 @@ header h5 {
 
 .pilt {
     margin: 100px;
+    flex-direction: row;
 }
 
 .sisu {
@@ -41,6 +42,7 @@ header h5 {
     line-height: 2;
     margin: 40px;
     margin-top: 80px;
+    flex-direction: row;
 }
 
 footer {
@@ -50,3 +52,12 @@ footer {
     text-align: center;
     padding: 40px;
 }
+
+@media (max-width: 800px) {
+    .content {
+      flex-direction: column;
+    }
+    .sisu {
+        margin-top: 0;
+    }
+  }
