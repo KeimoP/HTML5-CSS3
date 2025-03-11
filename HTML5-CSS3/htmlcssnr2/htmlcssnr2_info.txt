@@ -1,0 +1,23 @@
+Loo HTML leht ja vorminda CSS's
+
+Avatar: https://getavataaars.com/
+Pilt tekstis: https://picsum.photos/
+Taustapilt: https://coolbackgrounds.io/
+Tekst: https://www.lipsum.com/
+
+Banneri osa
+	Konteineri kõrgus 480px
+	Sisu kaugus servast 80px
+	Tekst keskel
+	Avatar: suurus 150, raam 50% ümar 10px tumekollane
+	Pealkiri: 100px, valge, tühi ala ümber 10px
+	Slogan: 30px, valge, kaldus
+	
+Sisu osa
+	Konteineri kõrgus 600px
+	Tekst: 20px, reasamm 2.0
+	Pilt: 600x100px, tühi alaümber pildi 100px, joondatud vasakule
+	
+Jaluse osa
+	Tekst 32px
+	Tühi ala ümber: 40px
