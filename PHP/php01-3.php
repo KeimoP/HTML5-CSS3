@@ -9,10 +9,10 @@
   <body>
 	<div class="container">
 		<div class="row">
-			<div class="col-ms-3">
+			<div class="col-sm-5">
 				<?php
 					/*
-						PHP Harjutus 1
+						PHP Harjutus 1,2
 						keimo
 						Haapsalu Kutsehariduskeskus
 						11.03.2025
@@ -69,6 +69,36 @@
 					$pindala = ($a * $a) / 2;
 					echo sprintf("Kolmnurga ümbermõõt on: %0.2f", $umbermoot), "<br>";
 					echo sprintf("Kolmnurga pindala on: %0.2f", $pindala), "<br>";
+				?>
+			</div>
+			<div class="col-sm-6">
+				<?php
+					echo "<br>"
+				?>
+				<h1>Harjutus 3</h1>
+				<form method="get">
+					a <input type="text" name="a"><br>
+					b <input type="text" name="b"><br>
+					h <input type="text" name="h"><br>
+					<input type="submit" value="Saada">
+				</form>
+				<?php
+					/*
+						PHP Harjutus 3
+						keimo
+						Haapsalu Kutsehariduskeskus
+						21.03.2025
+					*/
+					//lisab vormist saadud andmed muutujasse
+					if (isset($_GET['a']) && isset($_GET['b']) && isset($_GET['h'])) {
+						$a = $_GET['a'];
+						$b = $_GET['b'];
+						$h = $_GET['h'];
+						$trapetsipindala = (($a + $b) * $h) /2;
+						$rombiumbermoot = 4 * $a;
+						echo "Rombiümbermõõt on: ",$rombiumbermoot,"<br>";
+						echo "Trapetsipindala on: ",$trapetsipindala, "<br>";
+					}
 				?>
 			</div>
 		</div>
