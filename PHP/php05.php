@@ -88,10 +88,9 @@
               echo "</h3>";
               echo "<br>";
               
-              echo "<h1>Keskmine palk 2018:</h1>";
               echo "<h3>";
               $palgad = array(1220,1213,1295,1312,1298,1354,1296,1286,1292,1327,1369,1455);
-              echo array_sum($palgad), "€";
+              echo "Keskmine palk 2018: ",array_sum($palgad), "€";
 
               echo "<br>";
               echo "<br>";
