@@ -25,6 +25,7 @@
             echo $tudrukud[7], "<br>";
             $suvakas = rand(0,7);
             echo $tudrukud[$suvakas], "<br>";
+            echo "</h3>";
             echo "<br>";
             echo "<h1>Autod:</h1>";
             $autod = array("Subaru","BMW","Acura","Mercedes-Benz","Lexus","GMC","Volvo","Toyota","Volkswagen","Volkswagen","GMC","Jeep","Saab","Hyundai","Subaru","Mercedes-Benz",
@@ -48,16 +49,100 @@
               "5GAER13D19J026924", "1G4HC5EM1BU329204", "3VWML7AJ6CM772736", "3C6TD4HT2CG011211", "JTDZN3EU2FJ023675", "JN8AZ1MU4CW041721", "KNAFX5A82F5991024", 
               "1N6AA0CJ1D57470", "WAUEG98E76A780908", "WAUAF78E96A920706", "1GT01XEG8FZ268942", "1FTEW1CW4AF371278", "JN1AZ4EH8DM531691", "WAUEKAFBXAN294295", 
               "1N6AA0EDXFN868772", "WBADW3C59DJ422810");
-
+              echo "<h3>";
               $autodearv = count($autod);
               echo $autodearv, "<br>";
               $vincodearv = count($vincode);
               echo $vincodearv, "<br>";
+              if ($vincodearv == $autodearv) {
+                echo "Massiviid on ühepikkused";
+              }
+              else {
+                echo "Massiviid pole ühepikkused";
+              }
+              echo "<br>";
+              $toyotaarv = 0;
+              foreach ($autod as $auto) {
+                if ($auto == "Toyota") {
+                  $toyotaarv += 1;
+                }
+              }
+              $audiarv = 0;
+              foreach ($autod as $auto) {
+                if ($auto == "Audi") {
+                  $audiarv += 1;
+                }
+              }
+              echo "Toyotasi on ", $toyotaarv;
+              echo "<br>";
+              echo "Audisi on ", $audiarv;
+              echo "<br>";
+              echo "<br>";
 
-
-              
+              foreach ($vincode as $vin) {
+                if (strlen($vin) < 17) {
+                  echo $vin;
+                  echo "<br>";
+                }
+              }
               echo "</h3>";
-        ?>
+              echo "<br>";
+              
+              echo "<h1>Keskmine palk 2018:</h1>";
+              echo "<h3>";
+              $palgad = array(1220,1213,1295,1312,1298,1354,1296,1286,1292,1327,1369,1455);
+              echo array_sum($palgad), "€";
+
+              echo "<br>";
+              echo "<br>";
+              $firmad = array("Kimia", "Mynte", "Voomm", "Twiyo", "Layo", "Talane", "Gigashots", "Tagchat", "Quaxo", "Voonyx", "Kwilith", "Edgepulse", "Eidel", "Eadel", "Jaloo", "Oyope", "Jamia");
+              
+              if (isset($_GET['firmanimi'])) {
+                  $firmanimi = $_GET['firmanimi'];
+                  if (($key = array_search($firmanimi, $firmad)) !== false) {
+                      unset($firmad[$key]);
+                  }
+              }
+              foreach ($firmad as $firma) {
+                  echo $firma, ", ";
+              }
+              echo "<br>";
+              echo "<br>";
+              echo "</h3>";
+              ?>
+              
+          <form method="get">
+              Eemalda firma: 
+              <input type="text" name="firmanimi"><br>
+              <input type="submit" value="Submit">
+          </form>
+          <?php
+            echo "<br>";
+            $riigid = array("Indonesia","Canada","Kyrgyzstan","Germany","Philippines","Philippines","Canada","Philippines","South Sudan","Brazil","Democratic Republic of the Congo","Indonesia","Syria","Sweden","Philippines","Russia","China","Japan","Brazil","Sweden","Mexico","France","Kazakhstan","Cuba","Portugal","Czech Republic");
+            $pikimnimi = max(array_map('strlen', $riigid));
+            echo "Pikima riiginime märkide arv on ", $pikimnimi, " tähte.";
+            echo "<br>";
+            echo "<br>";
+            $hiinanimed = array("瀚聪","月松","雨萌","展博","雪丽","哲恒","慧妍","博裕","宸瑜","奕漳","思宏","伟菘","彦歆","睿杰","尹智","琪煜","惠茜","晓晴","志宸","博豪","璟雯","崇杉","俊誉","军卿","辰华","娅楠","志宸","欣妍","明美");
+            sort($hiinanimed);
+            echo $hiinanimed[0], "<br>";
+            $viimanehiinanimi = count($hiinanimed)-1;
+            echo $hiinanimed[$viimanehiinanimi];
+            echo "<br>";
+            echo "<br>";
+            $google = array("Feake","Bradwell","Dreger","Bloggett","Lambole","Daish","Lippiett","Blackie","Stollenbeck","Houseago","Dugall","Sprowson","Kitley","Mcenamin","Allchin","Doghartie","Brierly","Pirrone","Fairnie","Seal","Scoffins","Galer","Matevosian","DeBlase","Cubbin","Izzett","Ebi","Clohisey","Prater","Probart","Samwaye","Concannon","MacLure","Eliet","Kundt","Reyes");
+            if (isset($_GET['googl'])) {
+              $firmanimi = $_GET['googl'];
+              if (($key = array_search($firmanimi, $firmad)) !== false) {
+                  echo "on olemas";
+              }
+            }
+          ?>
+          <form method="get">
+              Otsi goog: 
+              <input type="text" name="googl"><br>
+              <input type="submit" value="Submit">
+          </form>
     </div>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
