@@ -8,7 +8,9 @@
   </head>
   <body>
     <div class="container">
-        <?php
+         <div class="row">
+          <div class="col-sm-12">
+          <?php
             /*
                 PHP Harjutus 5
                 keimo
@@ -85,12 +87,10 @@
                   echo "<br>";
                 }
               }
-              echo "</h3>";
               echo "<br>";
               
-              echo "<h3>";
               $palgad = array(1220,1213,1295,1312,1298,1354,1296,1286,1292,1327,1369,1455);
-              echo "Keskmine palk 2018: ",array_sum($palgad), "€";
+              echo "Keskmine palk 2018 on ", array_sum($palgad), "€";
 
               echo "<br>";
               echo "<br>";
@@ -129,19 +129,39 @@
             echo $hiinanimed[$viimanehiinanimi];
             echo "<br>";
             echo "<br>";
-            $google = array("Feake","Bradwell","Dreger","Bloggett","Lambole","Daish","Lippiett","Blackie","Stollenbeck","Houseago","Dugall","Sprowson","Kitley","Mcenamin","Allchin","Doghartie","Brierly","Pirrone","Fairnie","Seal","Scoffins","Galer","Matevosian","DeBlase","Cubbin","Izzett","Ebi","Clohisey","Prater","Probart","Samwaye","Concannon","MacLure","Eliet","Kundt","Reyes");
+            $google = array("Feake", "Bradwell", "Dreger", "Bloggett", "Lambole", "Daish", "Lippiett", "Blackie", "Stollenbeck", "Houseago", "Dugall", "Sprowson", "Kitley", "Mcenamin", "Allchin", "Doghartie", "Brierly", "Pirrone", "Fairnie", "Seal", "Scoffins", "Galer", "Matevosian", "DeBlase", "Cubbin", "Izzett", "Ebi", "Clohisey", "Prater", "Probart", "Samwaye", "Concannon", "MacLure", "Eliet", "Kundt", "Reyes");
+
             if (isset($_GET['googl'])) {
-              $firmanimi = $_GET['googl'];
-              if (($key = array_search($firmanimi, $firmad)) !== false) {
-                  echo "on olemas";
-              }
+                $googlenimi = $_GET['googl'];
+                if (in_array($googlenimi, $google)) {
+                    echo '<div class="alert alert-success" role="alert">Nimi on olemas!</div>';
+                } else {
+                    echo '<div class="alert alert-danger" role="alert">Pole sellist nime!</div>';
+                }
             }
-          ?>
-          <form method="get">
-              Otsi goog: 
-              <input type="text" name="googl"><br>
-              <input type="submit" value="Submit">
-          </form>
+            ?>
+            <form method="get">
+                Otsi googlist: 
+                <input type="text" name="googl"><br>
+                <input type="submit" value="Submit">
+            </form>
+            <?php
+              echo "<br>";
+              echo "<br>";
+              $pildid = array("img/prentice.jpg","img/freeland.jpg","img/peterus.jpg","img/devlin.jpg","img/gabriel.jpg","img/pete.jpg");
+              echo "<img src=$pildid[2] alt=prentice>", "<br>", "<br>";
+              foreach($pildid as $pilt) {
+                echo "<img src=$pilt alt=prentice>";
+              }
+              echo "</div>";
+              echo "<div class='row'>";
+              foreach($pildid as $pilt) {
+                echo "<div class='col-sm-2'><img src=$pilt alt=prentice></div>";
+              }
+              echo "</div>";
+            ?>
+          </div>
+         </div>
     </div>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
