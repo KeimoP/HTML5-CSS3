@@ -11,6 +11,7 @@
         <?php
             $korda = 0;
             $number = 10;
+            $var = range(0, 100);
             $arv1_100 = random_int(1,100);
             if ($arv1_100 !== 0) {
                 $vaiksemnumber = $arv1_100 / 10;
@@ -37,7 +38,36 @@
                 echo $number, "<br>";
                 $number -= 1;
             }
+            echo "<br>";
+            echo "<br>";
+            foreach ($var as &$kolmega) {
+                if ($kolmega % 3 == 0) {
+                    echo $kolmega,","," "; 
+                }
+            }
+            echo "<br>";
+            echo "<br>";
+            $tudrukud = ['mari', 'kati', 'marion', 'kerli', 'Maria'];
+            $poisid = ['gabriel','mario','üllar','joonas','henrik']; 
+            for ($i = 0; $i < count($tudrukud); $i++) {
+                echo "<div class='row'>";
+                echo "<div class='col-sm-1'>{$tudrukud[$i]}</div>";
+                echo "<div class='col-sm-1'>{$poisid[$i]}</div>";
+                echo "</div>";
+            }
+            echo "<br>";
+            echo "<br>";
+            
+            shuffle($tudrukud);
+            shuffle($poisid);
+            for ($i = 0; $i < count($tudrukud); $i++) {
+                echo "<div class='row'>";
+                echo "<div class='col-sm-1'>{$tudrukud[$i]}</div>";
+                echo "<div class='col-sm-1'>{$poisid[$i]}</div>";
+                echo "</div>";
+            }
         ?>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
