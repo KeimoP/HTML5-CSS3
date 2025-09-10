@@ -33,6 +33,17 @@
       <br>
       <br>
       <?php
+      function generateRandomString($length = 10) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+    
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[random_int(0, $charactersLength - 1)];
+        }
+    
+        return $randomString;
+    }
             function kasutajanimi() {
               if (isset($_GET['name1'])) {
                 $nimi = strtolower($_GET['name1']);
@@ -41,9 +52,9 @@
                   $tahed = str_shuffle($nimituhikuta);
                   $numbird = [1,2,3,4,5,6,7,8,9];
                   $numbridshuffled = shuffle($numbird);
-                  echo $nimituhikuta;
                 }
             }
+            
       ?>
       <form method="get">
         <div class="form-group">
@@ -52,9 +63,37 @@
           <small class="form-text text-muted">Loome sulle @hkhk.edu.ee</small>
         </div>
       </form>
-      <?php 
-        kasutajanimi();
-      ?>
+      <table class="table table-bordered border-primary">
+        <tbody>
+          <tr class="table-active">
+            <td>kasutajanimi:</td>
+            <td>
+              <?php 
+                kasutajanimi();
+              ?>
+            </td>
+          </tr>
+          <tr>
+            <td>Parool:</td>
+            <td><?php echo generateRandomString(7);?></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="row g-2">
+        <div class="col-md">
+          <div class="form-floating">
+            <input type="number" class="form-control" name="a"><br>
+            <label for="floatingInputGrid">Number:</label>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="form-floating">
+            <input type="number" class="form-control" name="b"><br>
+            <label for="floatingSelectGrid">Kuni:</label>
+          </div>
+        </div>
+        <input type="submit" value="genereeri" class="btn btn-success">
+      </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
