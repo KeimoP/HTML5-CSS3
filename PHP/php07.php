@@ -54,7 +54,34 @@
                   $numbridshuffled = shuffle($numbird);
                 }
             }
-            
+            function vahemikud($a1, $a2, $s) {
+              
+            }
+            function rectangleS($a1, $a2){
+              return $a1 * $a2;
+            }
+            function ik($ik) {
+              $pikkus = strlen($ik);
+              if ($pikkus==11) {
+                if (intval($ik[0])%2==0) {
+                  $vastus = "Naine";
+                } else {
+                  $vastus = "Mees";
+                }
+              }
+              else {
+                $vastus="Vale pikkusega";
+              }
+              return $vastus;
+            }
+            function headMotted(){
+              $alused = array("Mari","Jüri","Eke");
+              $oeldised = array("armastab","viskab","tõmbab","seksib");
+              $sihitised = array("mind","sind","teda");
+
+              echo $alused[array_rand($alused)];
+            }
+            headMotted();
       ?>
       <form method="get">
         <div class="form-group">
@@ -94,6 +121,36 @@
         </div>
         <input type="submit" value="genereeri" class="btn btn-success">
       </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h2>Ristküliku pindala</h2>
+      <br>
+      <form>
+        <div class="row">
+          <div class="col">Külg 1 <input class="form-control" type="number" name="kylg1" value="10"></div>
+          <div class="col">Külg 2 <input class="form-control" type="number" name="kylg2" value="10"></div>
+        </div>
+        <br>
+        <div class="row">
+          <input class="btn btn-danger" type="submit" value="Arvuta">
+        </div>
+        <br>
+        <?php
+          if (isset($_GET['kylg1']) && isset($_GET['kylg2'])) {
+            $a1 = floatval($_GET['kylg1']);
+            $a2 = floatval($_GET['kylg2']);
+          }
+        ?>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInputDisabled" placeholder="name@example.com" disabled>
+          <label for="floatingInputDisabled"><br><strong>Pindala</strong><?php echo rectangleS($a1, $a2) ?></label>
+        </div>
+      </form>
+      <?php
+        echo ik("38011064711");
+      ?>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
