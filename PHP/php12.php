@@ -17,59 +17,61 @@
 					*/
 					//muutujate loomine
                 ?>
-                <?php
-                    $fail = 'tootajad.csv';
-                    $minu_csv = fopen($fail, 'r') or die('Faili ei saa avada!');
+                     <?php
+                        $allikas = 'tootajad.csv';
+                        $minu_csv = fopen($allikas, 'r') or die('Ei leia faili!');
+                        $rida = fgetcsv($minu_csv, filesize($allikas), ';');
 
-                    $meeste_palgad = [];
-                    $naiste_palgad = [];
+                        $meeste_palgad = [];
+                        $naiste_palgad = [];
 
-                    while (($rida = fgetcsv($minu_csv, 1000, "\t")) !== FALSE) {
-                        if (count($rida) == 3) {
-                            $nimi = $rida[0];
-                            $sugu = strtolower(trim($rida[1]));
-                            $palk = (int)trim($rida[2]);
+                        while (($rida = fgetcsv($minu_csv, 1000, ';')) !== FALSE) {
+                            if (count($rida) == 3) {
+                                $nimi = $rida[0];
+                                $sugu = strtolower(trim($rida[1]));
+                                $palk = (int)trim($rida[2]);
 
-                            if ($sugu == 'm') {
-                                $meeste_palgad[] = $palk;
-                            } elseif ($sugu == 'n') {
-                                $naiste_palgad[] = $palk;
+                                if ($sugu == 'm') {
+                                    $meeste_palgad[] = $palk;
+                                } elseif ($sugu == 'n') {
+                                    $naiste_palgad[] = $palk;
+                                }
                             }
                         }
-                    }
 
-                    fclose($minu_csv);
+                        fclose($minu_csv);
 
-                    function statistika($palgad) {
-                        if (count($palgad) === 0) {
-                            return [0, 0];
+                        function statistika($palgad) {
+                            if (count($palgad) === 0) {
+                                return [0, 0];
+                            }
+                            $keskmine = array_sum($palgad) / count($palgad);
+                            $max = max($palgad);
+                            return [$keskmine, $max];
                         }
-                        $keskmine = array_sum($palgad) / count($palgad);
-                        $max = max($palgad);
-                        return [$keskmine, $max];
-                    }                    
 
-                    list($meeste_keskmine, $meeste_max) = statistika($meeste_palgad);
-                    list($naiste_keskmine, $naiste_max) = statistika($naiste_palgad);
+                        list($meeste_keskmine, $meeste_max) = statistika($meeste_palgad);
+                        list($naiste_keskmine, $naiste_max) = statistika($naiste_palgad);
                     ?>
                     <div class="row">
                         <h2 class="text-center">Palkade võrdlus</h2>
-                        <div class="col">
+                        <div class="col-sm-6 text-center">
                             <?php
                                 echo "<strong>Mehed:</strong><br>";
                                 echo "Keskmine palk: " . round($meeste_keskmine) . " €<br>";
                                 echo "Kõrgeim palk: " . $meeste_max . " €<br><br>";
                             ?>
                         </div>
-                        <div class="col">
+                        <div class="col-sm-6 text-center">
                             <?php
                                 echo "<strong>Naised:</strong><br>";
                                 echo "Keskmine palk: " . round($naiste_keskmine) . " €<br>";
                                 echo "Kõrgeim palk: " . $naiste_max . " €<br><br>";
                             ?>
                         </div>
+                        <div class="col"></div>
                     </div>
-                    <div class="row">
+                    <div class="text-center">
                         <?php
                             if ($meeste_keskmine > $naiste_keskmine) {
                                 echo "Meeste keskmine palk on kõrgem.";
