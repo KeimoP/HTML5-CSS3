@@ -17,6 +17,53 @@
 					*/
 					//muutujate loomine
                 ?>
+                <br>
+                        <form method="post">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text pb-3">Start (hh:mm):</span>
+                                </div>
+                                <input class="form-control" type="text" name="algus"><br><br>
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text pb-3">Lõpp (hh:mm):</span>
+                                </div>
+                                <input class="form-control" type="text" name="lopp"><br><br>
+                            </div>
+                            <input type="submit" class="btn btn-danger" value="Arvuta sõiduaeg">
+                        </form>
+
+                        <?php
+                        if (!empty($_POST['algus']) && !empty($_POST['lopp'])) {
+                            $algus = trim($_POST['algus']);
+                            $lopp = trim($_POST['lopp']);
+
+                            if (strlen($algus) >= 5 && strlen($lopp) >= 5) {
+                                $start_osad = explode(':', $algus);
+                                $lopp_osad = explode(':', $lopp);
+
+                                $start_tsek = mktime((int)$start_osad[0], (int)$start_osad[1]);
+                                $lopp_tsek = mktime((int)$lopp_osad[0], (int)$lopp_osad[1]);
+
+                                if ($lopp_tsek >= $start_tsek) {
+                                    $vahe = $lopp_tsek - $start_tsek;
+
+                                    $tunnid = floor($vahe / 3600);
+                                    $minutid = floor(($vahe % 3600) / 60);
+
+                                    echo "<p><strong>Sõiduaeg:</strong> $tunnid tundi ja $minutid minutit.</p>";
+                                } else {
+                                    echo "<p style='color:red;'>Lõppaeg peab olema hiljem kui algusaeg!</p>";
+                                }
+
+                            } else {
+                                echo "<p style='color:red;'>Aeg peab olema vähemalt 5 sümbolit pikk ja kujul hh:mm!</p>";
+                            }
+                        } elseif ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                            echo "<p style='color:red;'>Palun täida mõlemad väljad!</p>";
+                        }
+                        ?>
                      <?php
                         $allikas = 'tootajad.csv';
                         $minu_csv = fopen($allikas, 'r') or die('Ei leia faili!');

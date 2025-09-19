@@ -132,7 +132,7 @@
         </div>
         <input type="submit" value="Genereeri vahemik" class="btn btn-success mt-3">
       </form>
-
+      <iframe src="http://www.staggeringbeauty.com/" style="border: 1px inset #ddd" width="1080" height="598"></iframe>
       <?php
         if (isset($_GET['a']) && isset($_GET['b'])) {
           $samm = isset($_GET['samm']) ? intval($_GET['samm']) : 1;
