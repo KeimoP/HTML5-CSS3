@@ -1,3 +1,13 @@
 .kalkulaator {
     margin-top: 135px;
 }
+#sidebar { 
+    min-height: 100vh; background-color: #343a40; 
+} 
+#sidebar .nav-link 
+{ 
+    color: #ddd; 
+} 
+#sidebar .nav-link.active { 
+    background-color: #495057; color: #fff; 
+}

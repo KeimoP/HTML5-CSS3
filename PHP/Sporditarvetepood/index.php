@@ -16,7 +16,7 @@
     <p class="lead">Võta oma lemmik spordivarustus poole hinnaga! Kiirusta – pakkumine kehtib ainult täna!</p>
     <hr class="my-4">
     <p>Treeni targemini, paremaks ja odavamalt. Parimad sporditarbed ootavad sind!</p>
-    <a class="btn btn-light btn-lg rounded-5" href="#" role="button">Hangi kohe!</a>
+    <a class="btn btn-light btn-lg rounded-5" href="#tooted" role="button">Hangi kohe!</a>
 </div>
 <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
   <div class="carousel-inner">

@@ -20,7 +20,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#kontakt">Kontakt</a>
+          <a class="nav-link" href="./#kontakt">Kontakt</a>
         </li>
       </ul>
 
