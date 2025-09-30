@@ -15,17 +15,17 @@
             <p><i class="fas fa-phone mr-3"></i> +372 666 1740</p>
           </div>
         </div>
-      </section>
 
-    <div class="copyright">
-    <hr class="my-2">
-        <section class="p-3 pt-0">
-        <div class="row d-flex align-items-center">
-          <div class="col-md-7 col-lg-8 text-center text-md-start">
-            <div class="p-3">
-              © 2025 Copyright
+        <div class="copyright">
+            <hr class="my-2">
+            <div class="p-3 pt-0">
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-7 col-lg-8 text-center text-md-start">
+                        <div class="p-3">
+                            © 2025 Copyright
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-    </div>
 </footer>
