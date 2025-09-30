@@ -15,9 +15,9 @@
             echo '<div class="card h-100">';
             echo '<img src="' . $img . '" class="card-img-top" alt="' . htmlspecialchars($nimi) . '">';
             echo '<div class="card-body d-flex flex-column">';
-            echo '<h5 class="card-title id="'.htmlspecialchars($kategooria).'">' . htmlspecialchars($nimi) . '</h5>';
+            echo '<h5 class="card-title id="'.$kategooria.'">' . htmlspecialchars($nimi) . '</h5>';
             echo '<p class="card-text">' . htmlspecialchars($hind) . '€</p>';
-            echo '<a href="#" class="btn btn-primary mt-auto">Lisa ostukorvi</a>';
+            echo '<button href="#" class="btn btn-dark mt-auto"><span><i class="bi bi-cart"></i></span> <span>Lisa ostukorvi</span></button>';
             echo '</div></div></div>';
 
             $i++;

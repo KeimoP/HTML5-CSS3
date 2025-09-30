@@ -3,16 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sporditarvete Kalkulaator</title>
+    <title>Sporditarvete kalkulaator</title>
     <link rel="icon" href="./pildid/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/kalkulaator.css">
   </head>
   <body>
     <?php include('header.php'); ?>
     
     <div class="container mt-5">
-      <h2 class="mb-4">Treeneri Kalkulaator</h2>
+      <h2 class="mb-4">Treeneri kalkulaator</h2>
       <form method="post" class="mb-3">
         <div class="mb-3">
           <label for="treener" class="form-label">Vali treeneri tüüp:</label>
@@ -21,6 +23,8 @@
             <option value="professionaalne">Professionaalne Treener (€50/h)</option>
             <option value="tavaline">Tavaline Treener (€30/h)</option>
             <option value="opilas">Õpilas Treener (€15/h)</option>
+            <option value="gabriel">Gabriel Hännikäinen (€2/h)</option>
+            <option value="maria">Maria (€0.5/h)</option>
           </select>
         </div>
         <div class="mb-3">
@@ -38,7 +42,9 @@
           $prices = [
             'professionaalne' => 50,
             'tavaline' => 30,
-            'opilas' => 15
+            'opilas' => 15,
+            'gabriel' => 2,
+            'maria' => 0.5
           ];
 
           if (isset($prices[$treenerituup]) && $hours > 0) {
@@ -50,6 +56,7 @@
         }
       ?>
     </div>
+    <?php include('footer.php'); ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>
